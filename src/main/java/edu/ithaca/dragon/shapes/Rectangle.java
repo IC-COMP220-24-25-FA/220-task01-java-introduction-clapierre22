@@ -18,5 +18,16 @@ public class Rectangle {
     public double longestLineWithin(){
         throw new RuntimeException("Not implemented yet");
     }
+
+    public static void main(String[] args) {
+        Rectangle tRectangle = new Rectangle(2, 1);
+        System.out.println("Should be 2: " + tRectangle.calcArea());
+
+        tRectangle = new Rectangle(4, 10);
+        System.out.println("Should be 40: " + tRectangle.calcArea());
+
+        tRectangle = new Rectangle(24, 6);
+        System.out.println("Should be 144: " + tRectangle.calcArea());
+    }
     
 }
