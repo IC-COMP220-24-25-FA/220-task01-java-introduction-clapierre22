@@ -47,6 +47,16 @@ public class CircleTest {
         tCircle.doubleSize();
         assertEquals(6.00046464, tCircle);
     }
+    public void longestLineWithinTest(){
+        Circle tCircle = new Circle(1);
+        assertEquals(2, tCircle.longestLineWithin(), 0.0001);
+
+        tCircle = new Circle(6.5);
+        assertEquals(2, tCircle.longestLineWithin(), 0.0001);
+
+        tCircle = new Circle(8.943);
+        assertEquals(2, tCircle.longestLineWithin(), 0.0001);
+    }
 
 
     
