@@ -2,6 +2,7 @@ package edu.ithaca.dragon.shapes;
 
 public class Circle {
     private double radius;
+    private double piValue = 3.145;
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number
@@ -14,7 +15,7 @@ public class Circle {
      * @return the area of this circle
      */
     public double calcArea(){
-        throw new RuntimeException("Not implemented yet");
+        return this.piValue * (this.radius * this.radius);
     }
 
     /**
@@ -29,5 +30,8 @@ public class Circle {
      */
     public double longestLineWithin(){
         throw new RuntimeException("Not implemented yet");
+    }
+    public static void main(String[] args) {
+        
     }
 }
