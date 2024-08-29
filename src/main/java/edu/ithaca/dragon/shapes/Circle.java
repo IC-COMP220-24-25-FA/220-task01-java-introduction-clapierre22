@@ -24,7 +24,7 @@ public class Circle {
     public void doubleSize(){
         double dRadius = 2 * (this.radius);
         this.radius = dRadius;
-
+    }
     /**
      * @return the longest straight line that can be drawn within this circle
      */
