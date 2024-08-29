@@ -29,9 +29,6 @@ public class Circle {
      * @return the longest straight line that can be drawn within this circle
      */
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
-    }
-    public static void main(String[] args) {
-        
+        return this.radius * 2;
     }
 }
