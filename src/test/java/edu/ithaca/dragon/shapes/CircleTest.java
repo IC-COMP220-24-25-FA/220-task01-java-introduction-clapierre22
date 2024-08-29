@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Test;
 
 public class CircleTest {
@@ -32,6 +31,21 @@ public class CircleTest {
     @Test
     public void TestConstructorError(){
         assertThrows(IllegalArgumentException.class, () -> new Circle(0));
+    }
+
+    @Test
+    public void doubleSizeTest(){
+        Circle tCircle = new Circle(1);
+        tCircle.doubleSize();
+        assertEquals(2, tCircle);
+
+        tCircle = new Circle(4.5);
+        tCircle.doubleSize();
+        assertEquals(9, tCircle);
+
+        tCircle = new Circle(3.00023232);
+        tCircle.doubleSize();
+        assertEquals(6.00046464, tCircle);
     }
 
 
