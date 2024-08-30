@@ -60,5 +60,7 @@ public class Rectangle {
         
         tRectangle = new Rectangle(20, 30);
         System.out.println("Should be 30: " + tRectangle.longestLineWithin());
+
+        // I wrote the last two tests wrong, gave the wrong 'Should be' values
     }
 }
