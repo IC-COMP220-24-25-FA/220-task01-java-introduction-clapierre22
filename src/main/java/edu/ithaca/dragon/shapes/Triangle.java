@@ -51,6 +51,14 @@ public class Triangle {
         System.out.println("Should be 110: " + tTriangle.calcArea());
 
         //longestLineWithinTest
+        tTriangle = new Triangle(2, 2);
+        System.out.println("Should be 2: " + tTriangle.longestLineWithin());
+
+        tTriangle = new Triangle(8, 3);
+        System.out.println("Should be 8: " + tTriangle.longestLineWithin());
+
+        tTriangle = new Triangle(12, 20);
+        System.out.println("Should be 20: " + tTriangle.longestLineWithin());
 
     }
 }
