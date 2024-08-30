@@ -67,6 +67,5 @@ public class Triangle {
 
         tTriangle = new Triangle(12, 20);
         System.out.println("Should be 20: " + tTriangle.longestLineWithin());
-
     }
 }
