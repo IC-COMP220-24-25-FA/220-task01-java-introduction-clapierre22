@@ -11,11 +11,15 @@ public class Triangle {
     
     public double calcArea(){
         // Calculatess the area of the given Triangle
-        return (base * height) * 0.5;
+        return (base * height) / 2;
     }
 
     public void doubleSize(){
-        // Doubles the size of the given Triangle
+        // Doubles the size of the given Triangle, doubles the height and base values and does not calculate
+        double dBase = 2 * base;
+        double dHeight = 2 * height;
+        base = dBase;
+        height = dHeight;
     }
 
     public double longestLineWithin(){
@@ -44,7 +48,7 @@ public class Triangle {
 
         tTriangle = new Triangle(11, 5);
         tTriangle.doubleSize();
-        System.out.println("Should be 605: " + tTriangle.calcArea());
+        System.out.println("Should be 110: " + tTriangle.calcArea());
 
         //longestLineWithinTest
 
