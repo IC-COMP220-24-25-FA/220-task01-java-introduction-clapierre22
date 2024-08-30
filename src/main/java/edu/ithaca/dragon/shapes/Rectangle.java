@@ -25,6 +25,7 @@ public class Rectangle {
     }
 
     public static void main(String[] args) {
+        // calcAreaTest
         Rectangle tRectangle = new Rectangle(2, 1);
         System.out.println("Should be 2: " + tRectangle.calcArea());
 
@@ -34,7 +35,7 @@ public class Rectangle {
         tRectangle = new Rectangle(24, 6);
         System.out.println("Should be 144: " + tRectangle.calcArea());
 
-
+        // doubleSizeTest
         tRectangle = new Rectangle(2, 1);
         tRectangle.doubleSize();
         System.out.println("Should be 4: " + tRectangle.calcArea());
@@ -46,5 +47,15 @@ public class Rectangle {
         tRectangle = new Rectangle(20, 30);
         tRectangle.doubleSize();
         System.out.println("Should be 1200: " + tRectangle.calcArea());
+
+        // longestLineWithin
+        tRectangle = new Rectangle(2, 1);
+        System.out.println("Should be 2: " + tRectangle.longestLineWithin());
+
+        tRectangle = new Rectangle(4, 5);
+        System.out.println("Should be 5: " + tRectangle.longestLineWithin());
+        
+        tRectangle = new Rectangle(20, 30);
+        System.out.println("Should be 30: " + tRectangle.longestLineWithin());
     }
 }
