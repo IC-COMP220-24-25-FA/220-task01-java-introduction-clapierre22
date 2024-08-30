@@ -10,10 +10,12 @@ public class Rectangle {
     }
 
     public double calcArea(){
-       return this.length * this.width;
+        // Calculates total area of given Rectangle
+        return this.length * this.width;
     }
 
     public void doubleSize(){
+        // Doubles the size of given Rectangle
         double dLength = 2 * this.length;
         double dWidth = 2 * this.width;
         this.length = dLength;
@@ -21,7 +23,8 @@ public class Rectangle {
     }
 
     public double longestLineWithin(){
-        throw new RuntimeException("Not implemented yet");
+        // Finds the longest straight line in given Rectangle
+        return Math.sqrt((this.length * this.length) + (this.width * this.width));
     }
 
     public static void main(String[] args) {
