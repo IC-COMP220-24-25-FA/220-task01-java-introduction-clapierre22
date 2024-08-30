@@ -34,6 +34,17 @@ public class Triangle {
         System.out.println("Should be 25: " + tTriangle.calcArea());
 
         // doubleSizeTest
+        tTriangle = new Triangle(2, 2);
+        tTriangle.doubleSize();
+        System.out.println("Should be 8: " + tTriangle.calcArea());
+
+        tTriangle = new Triangle(6, 10);
+        tTriangle.doubleSize();
+        System.out.println("Should be 120: " + tTriangle.calcArea());
+
+        tTriangle = new Triangle(11, 5);
+        tTriangle.doubleSize();
+        System.out.println("Should be 605: " + tTriangle.calcArea());
 
         //longestLineWithinTest
 
