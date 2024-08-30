@@ -23,10 +23,18 @@ public class Triangle {
 
     public static void main(String[] args) {
         // calcAreaTest
+        Triangle tTriangle = new Triangle(2, 2);
+        System.out.println("Should be 2: " + tTriangle.calcArea());
+
+        tTriangle = new Triangle(6, 3);
+        System.out.println("Should be 9: " + tTriangle.calcArea());
+
+        tTriangle = new Triangle(5, 10);
+        System.out.println("Should be 25: " + tTriangle.calcArea());
 
         // doubleSizeTest
 
         //longestLineWithinTest
-        
+
     }
 }
