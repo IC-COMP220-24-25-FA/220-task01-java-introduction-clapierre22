@@ -30,5 +30,18 @@ public class Rectangle {
 
         tRectangle = new Rectangle(24, 6);
         System.out.println("Should be 144: " + tRectangle.calcArea());
+
+
+        tRectangle = new Rectangle(2, 1);
+        tRectangle.doubleSize();
+        System.out.println("Should be 4: " + tRectangle.calcArea());
+
+        tRectangle = new Rectangle(6, 5);
+        tRectangle.doubleSize();
+        System.out.println("Should be 60: " + tRectangle.calcArea());
+
+        tRectangle = new Rectangle(20, 30);
+        tRectangle.doubleSize();
+        System.out.println("Should be 1200: " + tRectangle.calcArea());
     }
 }
