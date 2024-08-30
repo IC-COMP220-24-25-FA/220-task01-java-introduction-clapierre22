@@ -24,6 +24,14 @@ public class Triangle {
 
     public double longestLineWithin(){
         // Finds the longest straight line within the given Triangle
+        double lLine = 0;
+        if (base > height){
+            lLine = base;
+        }
+        else {
+            lLine = height;
+        }
+        return lLine;
     }
 
     public static void main(String[] args) {
