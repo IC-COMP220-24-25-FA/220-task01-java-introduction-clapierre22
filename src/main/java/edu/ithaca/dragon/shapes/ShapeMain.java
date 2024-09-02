@@ -2,9 +2,9 @@ package edu.ithaca.dragon.shapes;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class ShapeMain {
-
     
     public static void main(String[] args){
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
@@ -24,6 +24,13 @@ public class ShapeMain {
         for (Rectangle i : randRecList) {
             System.out.println("Random Rectangle Area: " + i.calcArea() + " Random Rectangle Longest Line: " + i.longestLineWithin());
         }
+
+        Scanner doubleIn = new Scanner(System.in);
+        System.out.println("Which Rectangle would you like to have Doubled?");
+
+        int counter = doubleIn.nextInt();
+        System.out.println("Counter is " + counter);
+
 
     }
 }
