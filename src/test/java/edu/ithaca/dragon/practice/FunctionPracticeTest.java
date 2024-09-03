@@ -1,5 +1,7 @@
 package edu.ithaca.dragon.practice;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
@@ -46,4 +48,43 @@ public class FunctionPracticeTest {
         // Above test checks to make sure the function still executes correctly despte contradictory input
     }
     
+    @Test
+    public void findFirstLargestTest(){
+        ArrayList<Integer> tFirstList1 = new ArrayList<>();
+        tFirstList1.add(1);
+        tFirstList1.add(2);
+        tFirstList1.add(3);
+        tFirstList1.add(4);
+        tFirstList1.add(5);
+
+        ArrayList<Integer> tFirstList2 = new ArrayList<>();
+        tFirstList1.add(1);
+        tFirstList1.add(5);
+        tFirstList1.add(3);
+        tFirstList1.add(4);
+        tFirstList1.add(5);
+
+        ArrayList<Integer> tFirstList3 = new ArrayList<>();
+        tFirstList1.add(1);
+        tFirstList1.add(1);
+        tFirstList1.add(2);
+        tFirstList1.add(1);
+        tFirstList1.add(1);
+
+        assertEquals(4, FunctionPractice.findFirstLargest(tFirstList1));
+        assertEquals(1, FunctionPractice.findFirstLargest(tFirstList2));
+        assertEquals(2, FunctionPractice.findFirstLargest(tFirstList3));
+        // Above test makes sure that the function executes as intended in the docstring
+
+        ArrayList<Integer> tFirstList4 = new ArrayList<>();
+
+        ArrayList<Integer> tFirstList5 = new ArrayList<>();
+        tFirstList1.add(-4);
+        tFirstList1.add(-2);
+        tFirstList1.add(-3);
+
+        assertEquals(-1, FunctionPractice.findFirstLargest(tFirstList4));
+        assertEquals(1, FunctionPractice.findFirstLargest(tFirstList5));
+        // Above test checks function to make sure it handles and empty list and a list with only negatives correctly
+    }
 }
