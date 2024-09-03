@@ -87,4 +87,44 @@ public class FunctionPracticeTest {
         assertEquals(1, FunctionPractice.findFirstLargest(tFirstList5));
         // Above test checks function to make sure it handles and empty list and a list with only negatives correctly
     }
+
+    @Test
+    public void findLastLargestTest(){
+        ArrayList<Integer> tLastList1 = new ArrayList<>();
+        tLastList1.add(1);
+        tLastList1.add(2);
+        tLastList1.add(3);
+        tLastList1.add(4);
+        tLastList1.add(5);
+
+        ArrayList<Integer> tLastList2 = new ArrayList<>();
+        tLastList1.add(1);
+        tLastList1.add(5);
+        tLastList1.add(3);
+        tLastList1.add(4);
+        tLastList1.add(5);
+
+        ArrayList<Integer> tLastList3 = new ArrayList<>();
+        tLastList1.add(1);
+        tLastList1.add(1);
+        tLastList1.add(2);
+        tLastList1.add(1);
+        tLastList1.add(1);
+
+        assertEquals(4, FunctionPractice.findLastLargest(tLastList1));
+        assertEquals(1, FunctionPractice.findLastLargest(tLastList2));
+        assertEquals(2, FunctionPractice.findLastLargest(tLastList3));
+        // Above test makes sure that the function executes as intended in the docstring
+
+        ArrayList<Integer> tLastList4 = new ArrayList<>();
+
+        ArrayList<Integer> tLastList5 = new ArrayList<>();
+        tLastList5.add(-4);
+        tLastList5.add(-2);
+        tLastList5.add(-3);
+
+        assertEquals(-1, FunctionPractice.findLastLargest(tLastList4));
+        assertEquals(1, FunctionPractice.findLastLargest(tLastList5));
+        // Above test checks function to make sure it handles and empty list and a list with only negatives correctly
+    }
 }
