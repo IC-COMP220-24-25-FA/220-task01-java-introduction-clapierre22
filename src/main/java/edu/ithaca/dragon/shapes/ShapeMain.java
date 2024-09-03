@@ -37,25 +37,22 @@ public class ShapeMain {
         for (Rectangle i : randRecList){
             System.out.println("Random Rectangle Area: " + i.calcArea() + " Random Rectangle Longest Line: " + i.longestLineWithin());
         }
+        int j = 0;
+        while (j < 5){
+            Scanner doubleIn = new Scanner(System.in);
+            System.out.println("Which Rectangle would you like to have Doubled?");
 
-        Scanner doubleIn = new Scanner(System.in);
-        System.out.println("Which Rectangle would you like to have Doubled?");
+            int counter = (doubleIn.nextInt()) - 1;
+            System.out.println("Counter is " + (counter + 1));
 
-        int counter = (doubleIn.nextInt()) - 1;
-        System.out.println("Counter is " + (counter + 1));
+            Rectangle randRecD = randRecList.get(counter);
+            randRecD.doubleSize();
+            randRecList.set(counter, randRecD);
 
-        Rectangle randRecD = randRecList.get(counter);
-        randRecD.doubleSize();
-        randRecList.set(counter, randRecD);
-
-        for (Rectangle i : randRecList){
-            System.out.println("Random Rectangle Area: " + i.calcArea() + " Random Rectangle Longest Line: " + i.longestLineWithin());
+            for (Rectangle i : randRecList){
+                System.out.println("Random Rectangle Area: " + i.calcArea() + " Random Rectangle Longest Line: " + i.longestLineWithin());
+            }
+            j++;
         }
-
-        // for (Rectangle i : randRecList){
-        //     if (randRecList[counter] == i){
-
-        //     }
-        // }
     }
 }
