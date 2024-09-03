@@ -2,7 +2,6 @@ package edu.ithaca.dragon.practice;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 public class FunctionPracticeTest {
@@ -18,12 +17,19 @@ public class FunctionPracticeTest {
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(-1, -1, -1));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, -1, 3));
         assertThrows(IllegalArgumentException.class, () -> FunctionPractice.largestOfThree(5, 3, -1));
-        // Above test checks functon to make sure that it resonds to illegal inputs in the manner intended in the docstring
+        // Above test checks functon to make sure that it responds to illegal inputs in the manner intended in the docstring
     }
 
     @Test
     public void calcSalePriceTest(){
-        fail("Not implemented yet");
+        assertEquals(13.5, FunctionPractice.calcSalePrice(20, 0.5, 0.35));
+        assertEquals(40.5, FunctionPractice.calcSalePrice(30, 0.1, 0.5));
+        assertEquals(51.75, FunctionPractice.calcSalePrice(60, 0.25, 0.15));
+        // Above test checks to make sure function executes in the way intended in the docstring
+        assertEquals(40, FunctionPractice.calcSalePrice(20, 0.0, 1.0));
+        assertEquals(12.5, FunctionPractice.calcSalePrice(25, 0.5, 0.0));
+        assertEquals(0, FunctionPractice.calcSalePrice(0, 0.5, 0.35));
+        // Above test checks function to ensure it responds to inputs that are not intended as in the docstring, but that should not break the code
     }
     
 }
