@@ -26,10 +26,24 @@ public class FunctionPracticeTest {
         assertEquals(40.5, FunctionPractice.calcSalePrice(30, 0.1, 0.5));
         assertEquals(51.75, FunctionPractice.calcSalePrice(60, 0.25, 0.15));
         // Above test checks to make sure function executes in the way intended in the docstring
+
         assertEquals(40, FunctionPractice.calcSalePrice(20, 0.0, 1.0));
         assertEquals(12.5, FunctionPractice.calcSalePrice(25, 0.5, 0.0));
         assertEquals(0, FunctionPractice.calcSalePrice(0, 0.5, 0.35));
         // Above test checks function to ensure it responds to inputs that are not intended as in the docstring, but that should not break the code
+    }
+
+    @Test
+    public void isGoodDogTest(){
+        assertEquals(true, FunctionPractice.isGoodDog(2, 5, true));
+        assertEquals(false, FunctionPractice.isGoodDog(2, 0, false));
+        assertEquals(true, FunctionPractice.isGoodDog(5, 20, true));
+        // Above test checks to make sure function executes in the way intended in the docstring
+        
+        assertEquals(false, FunctionPractice.isGoodDog(0, 0, false));
+        assertEquals(true, FunctionPractice.isGoodDog(2, 0, true));
+        assertEquals(true, FunctionPractice.isGoodDog(3, 5, false));
+        // Above test checks to make sure the function still executes correctly despte contradictory input
     }
     
 }
