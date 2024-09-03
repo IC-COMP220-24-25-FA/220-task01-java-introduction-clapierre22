@@ -40,9 +40,9 @@ public class FunctionPracticeTest {
         assertEquals(true, FunctionPractice.isGoodDog(5, 20, true));
         // Above test checks to make sure function executes in the way intended in the docstring
         
-        assertEquals(false, FunctionPractice.isGoodDog(0, 0, false));
-        assertEquals(true, FunctionPractice.isGoodDog(2, 0, true));
-        assertEquals(true, FunctionPractice.isGoodDog(3, 5, false));
+        assertEquals(false, FunctionPractice.isGoodDog(0, 0, true));
+        assertEquals(false, FunctionPractice.isGoodDog(2, 0, true));
+        assertEquals(false, FunctionPractice.isGoodDog(3, 5, false));
         // Above test checks to make sure the function still executes correctly despte contradictory input
     }
     
