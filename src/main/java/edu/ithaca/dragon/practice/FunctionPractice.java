@@ -1,5 +1,6 @@
 package edu.ithaca.dragon.practice;
 
+import java.lang.classfile.instruction.ThrowInstruction;
 import java.util.List;
 
 public class FunctionPractice {
@@ -9,7 +10,25 @@ public class FunctionPractice {
      * @throws IllegalArgumentException if any of the numbers is negative
      */
     public static int largestOfThree(int first, int second, int third){
-        throw new RuntimeException("Not Implemented");
+        int largestNum = 0;
+        if (first < 0 || second < 0 || third < 0){
+            throw new IllegalArgumentException("Negative Numbers are not Allowed");
+        }
+        else {
+            if (first > second && first > third){
+                largestNum = first;
+            }
+            else if (second > first && second > third){
+                largestNum = second;
+            }
+            else if (third > first && third > second){
+                largestNum = third;
+            }
+            else if (first == second && first == third && second == third){
+                largestNum = first;
+            }
+            return largestNum;
+        }
     }
     
     /**
