@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class ShapeMain {
     
+    
     public static void main(String[] args){
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
@@ -15,22 +16,46 @@ public class ShapeMain {
 
         ArrayList<Rectangle> randRecList = new ArrayList<>();
 
-        randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
-        randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
-        randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
-        randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
-        randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
+        Rectangle randRec1 = new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25));
+        Rectangle randRec2 = new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25));
+        Rectangle randRec3 = new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25));
+        Rectangle randRec4 = new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25));
+        Rectangle randRec5 = new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25));
 
-        for (Rectangle i : randRecList) {
+        randRecList.add(randRec1);
+        randRecList.add(randRec2);
+        randRecList.add(randRec3);
+        randRecList.add(randRec4);
+        randRecList.add(randRec5);
+
+        // randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
+        // randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
+        // randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
+        // randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
+        // randRecList.add(new Rectangle(randNum.nextDouble(20), randNum.nextDouble(25)));
+
+        for (Rectangle i : randRecList){
             System.out.println("Random Rectangle Area: " + i.calcArea() + " Random Rectangle Longest Line: " + i.longestLineWithin());
         }
 
         Scanner doubleIn = new Scanner(System.in);
         System.out.println("Which Rectangle would you like to have Doubled?");
 
-        int counter = doubleIn.nextInt();
-        System.out.println("Counter is " + counter);
+        int counter = (doubleIn.nextInt()) - 1;
+        System.out.println("Counter is " + (counter + 1));
 
+        Rectangle randRecD = randRecList.get(counter);
+        randRecD.doubleSize();
+        randRecList.set(counter, randRecD);
 
+        for (Rectangle i : randRecList){
+            System.out.println("Random Rectangle Area: " + i.calcArea() + " Random Rectangle Longest Line: " + i.longestLineWithin());
+        }
+
+        // for (Rectangle i : randRecList){
+        //     if (randRecList[counter] == i){
+
+        //     }
+        // }
     }
 }
