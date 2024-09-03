@@ -11,6 +11,7 @@ public class FunctionPractice {
      */
     public static int largestOfThree(int first, int second, int third){
         int largestNum = 0;
+
         if (first < 0 || second < 0 || third < 0){
             throw new IllegalArgumentException("Negative Numbers are not Allowed");
         }
@@ -35,7 +36,7 @@ public class FunctionPractice {
      * @return the final price at register of the given item after discount and tax applied
      */
     public static double calcSalePrice(double originalPrice, double discountPercent, double salesTax){
-        throw new RuntimeException("Not Implemented");
+        return ((originalPrice - (originalPrice * discountPercent)) + ((originalPrice - (originalPrice * discountPercent)) * salesTax));
     }
 
     /**
