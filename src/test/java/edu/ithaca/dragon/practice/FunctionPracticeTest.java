@@ -58,18 +58,18 @@ public class FunctionPracticeTest {
         tFirstList1.add(5);
 
         ArrayList<Integer> tFirstList2 = new ArrayList<>();
-        tFirstList1.add(1);
-        tFirstList1.add(5);
-        tFirstList1.add(3);
-        tFirstList1.add(4);
-        tFirstList1.add(5);
+        tFirstList2.add(1);
+        tFirstList2.add(5);
+        tFirstList2.add(3);
+        tFirstList2.add(4);
+        tFirstList2.add(5);
 
         ArrayList<Integer> tFirstList3 = new ArrayList<>();
-        tFirstList1.add(1);
-        tFirstList1.add(1);
-        tFirstList1.add(2);
-        tFirstList1.add(1);
-        tFirstList1.add(1);
+        tFirstList3.add(1);
+        tFirstList3.add(1);
+        tFirstList3.add(2);
+        tFirstList3.add(1);
+        tFirstList3.add(1);
 
         assertEquals(4, FunctionPractice.findFirstLargest(tFirstList1));
         assertEquals(1, FunctionPractice.findFirstLargest(tFirstList2));
@@ -79,9 +79,9 @@ public class FunctionPracticeTest {
         ArrayList<Integer> tFirstList4 = new ArrayList<>();
 
         ArrayList<Integer> tFirstList5 = new ArrayList<>();
-        tFirstList1.add(-4);
-        tFirstList1.add(-2);
-        tFirstList1.add(-3);
+        tFirstList5.add(-4);
+        tFirstList5.add(-2);
+        tFirstList5.add(-3);
 
         assertEquals(-1, FunctionPractice.findFirstLargest(tFirstList4));
         assertEquals(1, FunctionPractice.findFirstLargest(tFirstList5));
@@ -98,21 +98,21 @@ public class FunctionPracticeTest {
         tLastList1.add(5);
 
         ArrayList<Integer> tLastList2 = new ArrayList<>();
-        tLastList1.add(1);
-        tLastList1.add(5);
-        tLastList1.add(3);
-        tLastList1.add(4);
-        tLastList1.add(5);
+        tLastList2.add(1);
+        tLastList2.add(5);
+        tLastList2.add(3);
+        tLastList2.add(4);
+        tLastList2.add(5);
 
         ArrayList<Integer> tLastList3 = new ArrayList<>();
-        tLastList1.add(1);
-        tLastList1.add(1);
-        tLastList1.add(2);
-        tLastList1.add(1);
-        tLastList1.add(1);
+        tLastList3.add(1);
+        tLastList3.add(1);
+        tLastList3.add(2);
+        tLastList3.add(1);
+        tLastList3.add(1);
 
         assertEquals(4, FunctionPractice.findLastLargest(tLastList1));
-        assertEquals(1, FunctionPractice.findLastLargest(tLastList2));
+        assertEquals(4, FunctionPractice.findLastLargest(tLastList2));
         assertEquals(2, FunctionPractice.findLastLargest(tLastList3));
         // Above test makes sure that the function executes as intended in the docstring
 
