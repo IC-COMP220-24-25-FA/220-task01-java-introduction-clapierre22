@@ -127,4 +127,24 @@ public class FunctionPracticeTest {
         assertEquals(1, FunctionPractice.findLastLargest(tLastList5));
         // Above test checks function to make sure it handles and empty list and a list with only negatives correctly
     }
+
+    @Test
+    public void findFirstMostOccurencesOfLetterTest(){
+        ArrayList<String> tWordList = new ArrayList<>();
+        tWordList.add("apple");
+        tWordList.add("banana");
+        tWordList.add("carrot");
+        tWordList.add("dragonfruit");
+        tWordList.add("edamame");
+
+        char tWordChar1 = 'a';
+        char tWordChar2 = 'p';
+        char tWordChar3 = 'c';
+
+        assertEquals("banana", FunctionPractice.findFirstMostOccurencesOfLetter(tWordList, tWordChar1));
+        assertEquals("apple", FunctionPractice.findFirstMostOccurencesOfLetter(tWordList, tWordChar2));
+        assertEquals("carrot", FunctionPractice.findFirstMostOccurencesOfLetter(tWordList, tWordChar3));
+        // Above test checks function to make sure it executes as intended in the docstring
+        
+    }
 }
