@@ -1,6 +1,6 @@
 package edu.ithaca.dragon.shapes;
 
-public class Triangle {
+public class Triangle implements Shape{
     private double base;
     private double height;
 
@@ -11,7 +11,7 @@ public class Triangle {
 
     @Override
     public String toString(){
-        return ("This is a Triangle with a Base of " + base + "and a Height of " + height);
+        return ("This is a Triangle with a Base of " + base + " and a Height of " + height);
     }
     
     public double calcArea(){

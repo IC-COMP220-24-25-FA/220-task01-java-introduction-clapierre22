@@ -7,11 +7,37 @@ import java.util.Scanner;
 public class ShapeMain {
     
     public static void main(String[] args){
+        ArrayList<Shape> shapeList = new ArrayList<>();
+
+        Random randShape = new Random();
+        Random randNum = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            int counter = 0;
+            counter = randShape.nextInt(3);
+            if (counter == 0) {
+                shapeList.add(new Rectangle(randNum.nextDouble(25), randNum.nextDouble(30)));
+            }
+            else if (counter == 1) {
+                shapeList.add(new Circle(randNum.nextDouble(25)));
+            }
+            else if (counter == 2) {
+                shapeList.add(new Triangle(randNum.nextDouble(20), randNum.nextDouble(20)));
+            }
+        }
+
+        for (Shape a : shapeList) {
+            System.out.println(a.toString());
+        }
+
+        for (Shape b : shapeList) {
+            b.doubleSize();
+            System.out.println(b);
+        }
+
         //Make a list of 5 randomly-sized rectangles and print their area and the largest line that can be drawn through them
         //Allow the user to choose one, double the size of that one, and print them all again
         //Use a loop to repeat the process 5 times
-
-        Random randNum = new Random();
 
         ArrayList<Rectangle> randRecList = new ArrayList<>();
 

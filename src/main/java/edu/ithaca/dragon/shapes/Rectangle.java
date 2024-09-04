@@ -11,7 +11,7 @@ public class Rectangle implements Shape{
 
     @Override
     public String toString(){
-        return ("This is a Rectangle with a Length of " + length + "and a Width of " + width);
+        return ("This is a Rectangle with a Length of " + length + " and a Width of " + width);
     }
 
     public double calcArea(){
