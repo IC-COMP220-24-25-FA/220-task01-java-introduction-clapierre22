@@ -119,7 +119,22 @@ public class FunctionPractice {
      * @throws 
      */
     public static String findFirstMostOccurencesOfLetter(List<String> words, char letter){
-        throw new RuntimeException("Not Implemented");
+        int maxCounter = 0;
+        String rslt = null;
+        for (int i = 0; i < words.size(); i++) {
+            int counter = 0;
+            String mString = words.get(i);
+            for (int j = 0; j < mString.length(); j++) {
+                if (mString.charAt(j) == letter) {
+                    counter++;
+                }
+            if (counter > maxCounter) {
+                maxCounter = counter;
+                rslt = mString;
+            }
+            }
+        }
+        return rslt;
     }
 
 
