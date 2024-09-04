@@ -1,8 +1,13 @@
 package edu.ithaca.dragon.shapes;
 
-public class Circle {
+public class Circle implements Shape{
     private double radius;
     private double piValue = 3.145;
+
+    @Override
+    public String toString(){
+        return ("This is a Circle with a Radius of " + this.radius);
+    }
 
     /**
      * @throws IllegalArgumentException if radius is not a positive number

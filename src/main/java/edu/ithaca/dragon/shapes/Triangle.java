@@ -8,6 +8,11 @@ public class Triangle {
         base = baseIn;
         height = heightIn;
     }
+
+    @Override
+    public String toString(){
+        return ("This is a Triangle with a Base of " + base + "and a Height of " + height);
+    }
     
     public double calcArea(){
         // Calculatess the area of the given Triangle
